@@ -65,6 +65,7 @@ const updateGame = async (req: Request, res: Response) => {
     const hasGame = (await game.get()).data() || {};
 
     const data = {
+      id: gameId,
       title: title || hasGame.title,
       description: description || hasGame.description,
     };
